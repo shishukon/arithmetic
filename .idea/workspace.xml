@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7bfb4196-08fb-41e2-b745-4bac312ac51c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arithmetic/arithmetic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arithmetic/arithmetic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arithmetic12.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arithmetic12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arithmetic/arithmetic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arithmetic/arithmetic12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arithmetic/arithmetic12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arithmetic12.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +35,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Get_NewFormula">
+    <configuration name="Get_Formula" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Get_Formula" />
+      <module name="arithmetic" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Get_NewFormula" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Get_NewFormula" />
+      <module name="arithmetic" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="arithmetic12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="arithmetic12" />
       <module name="arithmetic" />
@@ -42,8 +57,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="newformula" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="newformula" />
+      <module name="arithmetic" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Get_NewFormula" />
+        <item itemvalue="Application.Get_Formula" />
+        <item itemvalue="Application.newformula" />
         <item itemvalue="Application.arithmetic12" />
       </list>
     </recent_temporary>
@@ -62,29 +87,53 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="318" key="GridCell.Tab.0.bottom" timestamp="1584780116869">
+    <state width="1877" height="318" key="GridCell.Tab.0.bottom" timestamp="1584955039084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584780116869" />
-    <state width="1877" height="318" key="GridCell.Tab.0.center" timestamp="1584780116869">
+    <state width="1877" height="318" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584955039084" />
+    <state width="1877" height="318" key="GridCell.Tab.0.center" timestamp="1584955039084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584780116869" />
-    <state width="1877" height="318" key="GridCell.Tab.0.left" timestamp="1584780116868">
+    <state width="1877" height="318" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584955039084" />
+    <state width="1877" height="318" key="GridCell.Tab.0.left" timestamp="1584955039083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584780116868" />
-    <state width="1877" height="318" key="GridCell.Tab.0.right" timestamp="1584780116869">
+    <state width="1877" height="318" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584955039083" />
+    <state width="1877" height="318" key="GridCell.Tab.0.right" timestamp="1584955039084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584780116869" />
-    <state x="640" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1584759841755">
+    <state width="1877" height="318" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584955039084" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584954352691">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584759841755" />
-    <state x="623" y="225" key="search.everywhere.popup" timestamp="1584778467605">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584954352691" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1584954352690">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584778467605" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584954352690" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1584954352690">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584954352690" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1584954352690">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584954352690" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1584872660490">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584872660490" />
+    <state x="640" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1584947174440">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584947174440" />
+    <state x="1134" y="215" width="786" height="612" key="find.popup" timestamp="1584862430114">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1134" y="215" width="786" height="612" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584862430114" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584872579606">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584872579606" />
   </component>
 </project>
