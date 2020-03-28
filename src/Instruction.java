@@ -1,15 +1,21 @@
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 
 public class Instruction {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int range = 0, number_of_questions = 0;
+        String Exercises_path = "";
+        String Answers_path = "";
+        FileName question = new FileName();
 
         System.out.println("欢迎使用");
-
-
         System.out.println("当前已有的题目文件：");
-            
+        question.get_ExercisesName();
+        //       question.get_AnswersName();
+        System.out.println("_______________________________");
 
         System.out.println("指令示例：");
         System.out.println("指定生成题目的个数，示例：-n 10 ");
@@ -39,26 +45,27 @@ public class Instruction {
 
             Scanner scanner = new Scanner(System.in); // 创建Scanner对象
             System.out.print("输入你的指令："); // 打印提示
-            String instruction = scanner.nextLine(); // 读取一行输入并获取字符串
+            String arr = scanner.nextLine(); // 读取一行输入并获取字符串
+            String [] instruction = arr.split("\\s+");//空格分割字符串
 
-
-            switch (instruction.substring(0,2)){
+            switch (instruction[0]){
                 case "-n":
-                    number_of_questions = Integer.parseInt(instruction.substring(3));
+                    number_of_questions = Integer.parseInt(instruction[1]);
                     break;
                 case "-r":
-                    range = Integer.parseInt(instruction.substring(3));
+                    range = Integer.parseInt(instruction[1]);
                     break;
                 case "-e":
+                    //-e Exercise1.txt -a Answers1.txt
+                    Exercises_path = "Exercises\\" + instruction[1];
+                    Answers_path = "Answers\\" + instruction[3];
+                    File Exercises_file = new File(Exercises_path);//题目文件的路径
+                    File Answers_file = new File(Answers_path);//答案文件的路径
 
+                    Desktop.getDesktop().open(Answers_file);//打开文件，测试路径是否正确
                     break;
 
             }
-
-
-
-
-
         }
     }
 }

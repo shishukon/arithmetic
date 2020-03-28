@@ -24,25 +24,27 @@ class get_Formula{  //用于组合两个算式
         this.f1 = new Formula(range);
         this.f2 = new Formula(range);
         symbol = all_symbol[(int) (Math.random()*4)];
-        if (f1.fraction_or_not == 0 && f2.fraction_or_not == 0){
+        if (f1.fraction_or_not == 0 && f2.fraction_or_not == 0){    //都不是分式
             if(f2.value==0 && symbol=='/')              //除数为0
                 formula = null;
             else{
-                if (symbol=='/' && f1.value % f2.value != 0){
+                if (symbol=='/' && f1.value % f2.value != 0){       //两个式子不能整除时
                     answer = f1.fraction(f1.value,f2.value);//补充个标记
                     formula = this.f1.formula + symbol + this.f2.formula;
-                } else{
+                } else{                                             //普通情况
                     value = f1.get_value(f1.value, f2.value, symbol); //得到答案，仅仅是整数   （之后分式功能写完后要分分式的运算和整数的运算）
 
                     if(value < 0){                 //结果为负数，答案取反，调换两个算式的位置
                         value = -value;
+                        answer = "" + value;
                         formula = this.f2.formula + symbol + this.f1.formula;
                     }
                     else
+                        answer = "" + value;
                         formula = this.f1.formula + symbol + this.f2.formula;
                 }
             }
-        }else if (f1.fraction_or_not == 1 && f2.fraction_or_not == 1){
+        }else if (f1.fraction_or_not == 1 && f2.fraction_or_not == 1){  //两个都是分式的情况
             if (symbol == '-' && f1.value1 * f2.value2 < f2.value1 * f1.value2){
                 formula = this.f2.formula + symbol + this.f1.formula;
             }else {
