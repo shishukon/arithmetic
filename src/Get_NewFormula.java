@@ -1,12 +1,12 @@
 //没有考虑分数！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-public class Get_NewFormula {
-    public static void main(String[] args){
-        for(int i =0 ;i<=10;i++){
-        get_Formula formula = new get_Formula(10);
-        System.out.println(formula.formula+ "=" + formula.value);
-       }
-    }
-}
+//public class Get_NewFormula {
+//    public static void main(String[] args){
+//        for(int i =0 ;i<=10;i++){
+//        get_Formula formula = new get_Formula(10);
+//        System.out.println(formula.formula+ "=" + formula.value);
+//       }
+//    }
+//}
 
 //随机数公式(int) (Math.random()*(max-min)+min)
 class get_Formula{  //用于组合两个算式
@@ -50,6 +50,7 @@ class get_Formula{  //用于组合两个算式
     //            answer = f1.value + "/" + f2.value;
     //        else
     //       answer = "" + value ;
+
 
         }
      }
