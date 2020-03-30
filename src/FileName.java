@@ -1,9 +1,31 @@
 
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FileName {
+	/*public static void main(String[] args) {
+		try
+		{
+			File writeName = new File("src/四则运算/Exercises.txt");
+			BufferedWriter out1 = new BufferedWriter(new FileWriter(writeName));
+			out1.write("Hello Word!\n");
+			out1.flush();
+			out1.close();
+			BufferedReader out2 = new BufferedReader(new FileReader(writeName));
+			String str = out2.readLine();
+			out2.close();
+			System.out.println(str);
+
+
+
+		} catch (IOException e)
+		{
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
+	}*/
+
     String[] Exercises = new String[100];//用于存放题目的名字
     String[] Answers = new String[100];//用于存放题目的名字
     FileName(){

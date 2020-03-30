@@ -1,10 +1,32 @@
+import java.io.IOException;
+
 //没有考虑分数！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 public class Get_NewFormula {
-    public static void main(String[] args){
-        for(int i =0 ;i<=10;i++){
-        get_Formula formula = new get_Formula(10);
+    public static void main(String[] args) throws IOException {
+        FileOperate file;
+        get_Formula formula;
+        int i;
+        String[] Exercises = new String[10000];//用于存放题目的名字
+        String[] Answers = new String[10000];//用于存放题目的名字
+        for(i = 0 ;i<=10;i++){
+        formula = new get_Formula(10);
+        Exercises[i] = formula.formula;
+        Answers[i] = formula.answer;
+        for (int j = 0;j < i;j++){//比对式子是否一样，先从答案是否一样判断，若是，则进一步判断式子的长度是否一样，若是，则模糊地认为这两个式子一样，则重新生成式子并重新判断
+            if (Answers[i].equals(Answers[j])){
+                if (Exercises[i].length() == Exercises[j].length())
+                    do {
+                        formula = new get_Formula(10);
+                        Exercises[i] = formula.formula;
+                        Answers[i] = formula.answer;
+                    }while(Exercises[i].length() != Answers[j].length());
+            }
+        }
         System.out.println(formula.formula+ "=" + formula.answer);//answer是有分数时的值跟value是没有分数时的值
        }
+        file = new FileOperate(Exercises,Answers,"Exercises1.txt","Answers1.txt",i);
+        file = new FileOperate("Exercises1.txt","Answers1.txt");
+
     }
 }
 
@@ -25,8 +47,11 @@ class get_Formula{  //用于组合两个算式
         this.f2 = new Formula(range);
         symbol = all_symbol[(int) (Math.random()*4)];
         if (f1.fraction_or_not == 0 && f2.fraction_or_not == 0){    //都不是分式
-            if(f2.value==0 && symbol=='/')              //除数为0
-                formula = null;
+            if(f2.value==0 && symbol=='/'){
+                do {
+                    this.f2 = new Formula(range);
+                }while (f2.value != 0);
+            }             //除数为0
             else{
                 if (symbol=='/' && f1.value % f2.value != 0){       //两个式子不能整除时
                     answer = f1.fraction(f1.value,f2.value);//补充个标记
@@ -38,10 +63,10 @@ class get_Formula{  //用于组合两个算式
                         value = -value;
                         answer = "" + value;
                         formula = this.f2.formula + symbol + this.f1.formula;
-                    }
-                    else
+                    } else{
                         answer = "" + value;
                         formula = this.f1.formula + symbol + this.f2.formula;
+                    }
                 }
             }
         }else if (f1.fraction_or_not == 1 && f2.fraction_or_not == 1){  //两个都是分式的情况
@@ -175,10 +200,17 @@ class Formula{
                 maxYinShu = i;
         }
         String fenShu;
-        if (zhengShu == 0)
-            fenShu = String.valueOf(fenZi / maxYinShu) + '/' +String.valueOf(b / maxYinShu);
-        else
-            fenShu = String.valueOf(zhengShu) + '’' + String.valueOf(fenZi / maxYinShu) + '/' +String.valueOf(b / maxYinShu);
+        if (zhengShu == 0){
+            if (fenZi == 0)
+                fenShu = String.valueOf(0);
+            else
+                fenShu = String.valueOf(fenZi / maxYinShu) + '/' +String.valueOf(b / maxYinShu);
+        } else{
+            if (fenZi == 0)
+                fenShu = String.valueOf(zhengShu);
+            else
+                fenShu = String.valueOf(zhengShu) + '’' + String.valueOf(fenZi / maxYinShu) + '/' +String.valueOf(b / maxYinShu);
+        }
         return fenShu;
     }
 

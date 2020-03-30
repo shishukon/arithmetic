@@ -27,11 +27,11 @@ public class Instruction {
             System.out.println(" ");
             if(range == 0 || number_of_questions == 0){
                 if (number_of_questions == 0 )
-                    System.out.println("未输入数值范围");
+                    System.out.println("未输入题目数量");
                 else
                     System.out.println("题目数量已记录，将生成题目数量为：" + number_of_questions);
                 if (range == 0 )
-                    System.out.println("未输入题目数量");
+                    System.out.println("未输入数值范围");
                 else
                     System.out.println("数值范围已记录，数值的范围为：" + range);}
 
