@@ -28,9 +28,9 @@ public class FileName {
 
     String[] Exercises = new String[100];//用于存放题目的名字
     String[] Answers = new String[100];//用于存放题目的名字
-    FileName(){
-        //将题目文件存入数组
-        int i = 0;
+    int i = 0;
+    int j = 0;
+    FileName(){//将题目文件存入数组
         File file = new File("Exercises");
         String[] list = file.list();
         assert list != null;
@@ -40,18 +40,26 @@ public class FileName {
         }
 
         //将答案文件存入数组
-        i = 0;
+
         File file2 = new File("Answers");
         String[] list2 = file2.list();
         assert list2 != null;
         for (String string : list2) {
             if(string.substring(string.length() - 3).equals("txt")){
-                Answers[i] = string;//将答案文件名字放入字符串数组
-                i ++;}
+                Answers[j] = string;//将答案文件名字放入字符串数组
+                j ++;}
         }
     }
 
     void get_ExercisesName(){
+        i = 0;
+        File file = new File("Exercises");
+        String[] list = file.list();
+        assert list != null;
+        for (String string : list) {
+            Exercises[i] = string;//将题目文件名字放入字符串数组
+            i ++;
+        }
         for(int i = 0;Exercises[i]!=null; i++ )
             System.out.println(Exercises[i]);
     }

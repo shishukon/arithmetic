@@ -1,34 +1,42 @@
+import java.io.File;
 import java.io.IOException;
 
-//没有考虑分数！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-public class Get_NewFormula {
-    public static void main(String[] args) throws IOException {
+class Get_NewFormula {
+    Get_NewFormula(int range,int number_of_questions) throws IOException {
         FileOperate file;
         get_Formula formula;
         int i;
         String[] Exercises = new String[10000];//用于存放题目的名字
-        String[] Answers = new String[10000];//用于存放题目的名字
-        for(i = 0 ;i<=10;i++){
-        formula = new get_Formula(10);
+        String[] Answers = new String[10000];//用于存放答案的名字
+        for(i = 0 ;i<number_of_questions;i++){
+        formula = new get_Formula(range);
         Exercises[i] = formula.formula;
         Answers[i] = formula.answer;
         for (int j = 0;j < i;j++){//比对式子是否一样，先从答案是否一样判断，若是，则进一步判断式子的长度是否一样，若是，则模糊地认为这两个式子一样，则重新生成式子并重新判断
             if (Answers[i].equals(Answers[j])){
                 if (Exercises[i].length() == Exercises[j].length())
                     do {
-                        formula = new get_Formula(10);
+                        formula = new get_Formula(range);
                         Exercises[i] = formula.formula;
                         Answers[i] = formula.answer;
-                    }while(Exercises[i].length() != Answers[j].length());
+                    }while(Exercises[i].length() != Exercises[j].length());
             }
         }
-        System.out.println(formula.formula+ "=" + formula.answer);//answer是有分数时的值跟value是没有分数时的值
+      //  System.out.println(formula.formula+ "=" + formula.answer);//answer是有分数时的值跟value是没有分数时的值
        }
-        file = new FileOperate(Exercises,Answers,"Exercises1.txt","Answers1.txt",i);
-        file = new FileOperate("Exercises1.txt","Answers1.txt");
+        FileName name = new FileName();
+        File writename1 = new File("./Exercises/Exercises" + (name.i+1) + ".txt");
+        writename1.createNewFile();
+        name.Exercises[name.i] = "Exercises" + (name.i+1) + ".txt";
+        File writename2 = new File("./Answers/Answers" + (name.j+1) + ".txt");
+        writename2.createNewFile();
+        name.Answers[name.j] = "Answers" + (name.j+1) + ".txt";
+        /*file = */new FileOperate(Exercises,Answers,"Exercises" + (name.i+1) + ".txt","Answers" + (name.j+1) + ".txt",i);
+//        file = new FileOperate("Exercises1.txt","Answers1.txt");
 
     }
 }
+
 
 //随机数公式(int) (Math.random()*(max-min)+min)
 class get_Formula{  //用于组合两个算式

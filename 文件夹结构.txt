@@ -1,0 +1,14 @@
+arithmetic-master
+├── .idea			
+├── Answers 			// 存放答案文件
+├── Exercises			// 存放题目文件
+├── Grade 			// 存放对错判断结果
+├── out				
+├── src		
+│ ├── FileName.java		// 统计当前已有文件数量
+│ ├── FileOperate.java  		// 输出题目、答案文件，判断对错
+│ ├── Get_NewFormula.java  		// 获得四则运算公式
+│ └── Instruction         		// 指令操作模块   
+├── 图片				//md文档图片
+├── PSD.docx			// PSD表格
+└──readme.md			// md文档
